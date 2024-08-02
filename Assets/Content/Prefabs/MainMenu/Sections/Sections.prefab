@@ -547,9 +547,17 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 43.6
       objectReference: {fileID: 0}
+    - target: {fileID: 3883145102020859057, guid: c4ccebf2fa85f1a46ad70abd0941bfef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.24597168
+      objectReference: {fileID: 0}
     - target: {fileID: 6703341388762861488, guid: c4ccebf2fa85f1a46ad70abd0941bfef, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.2602844
+      value: -1.260376
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038929405074613135, guid: c4ccebf2fa85f1a46ad70abd0941bfef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.36462402
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
