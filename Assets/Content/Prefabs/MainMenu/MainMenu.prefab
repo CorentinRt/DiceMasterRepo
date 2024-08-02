@@ -276,9 +276,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7495194952993194186}
     m_Modifications:
+    - target: {fileID: 3510841887353580056, guid: cfe4d0d8da7b025419d34138ddab51e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.24597168
+      objectReference: {fileID: 0}
     - target: {fileID: 5711989164510083979, guid: cfe4d0d8da7b025419d34138ddab51e0, type: 3}
       propertyPath: m_Name
       value: Sections
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367450540550893849, guid: cfe4d0d8da7b025419d34138ddab51e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.260376
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274996741437644070, guid: cfe4d0d8da7b025419d34138ddab51e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.36462402
       objectReference: {fileID: 0}
     - target: {fileID: 8375601847022196919, guid: cfe4d0d8da7b025419d34138ddab51e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -349,6 +361,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7495194952993194186}
     m_Modifications:
+    - target: {fileID: 49485211703661194, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.9999847
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175773721180710077, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.099990845
+      objectReference: {fileID: 0}
     - target: {fileID: 3562635160173532475, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -392,6 +412,10 @@ PrefabInstance:
     - target: {fileID: 4968701442712215488, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
       propertyPath: m_Name
       value: Header
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826674807723015562, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.000038
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
