@@ -202,7 +202,10 @@ MonoBehaviour:
   - {fileID: 4067756552918561018}
   - {fileID: 2047552824012343192}
   - {fileID: 9142809717546694551}
+  _startIndex: 2
   _transitionTime: 0.25
+  _slideType: 0
+  _timeBetweenAutomaticSlides: 0
 --- !u!1 &6729781451351318098
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,22 +545,6 @@ PrefabInstance:
     - target: {fileID: 3189794508981499132, guid: c4ccebf2fa85f1a46ad70abd0941bfef, type: 3}
       propertyPath: m_Name
       value: PlayPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3816104218357161119, guid: c4ccebf2fa85f1a46ad70abd0941bfef, type: 3}
-      propertyPath: m_fontSize
-      value: 43.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3883145102020859057, guid: c4ccebf2fa85f1a46ad70abd0941bfef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.24597168
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703341388762861488, guid: c4ccebf2fa85f1a46ad70abd0941bfef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1.260376
-      objectReference: {fileID: 0}
-    - target: {fileID: 7038929405074613135, guid: c4ccebf2fa85f1a46ad70abd0941bfef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.36462402
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
