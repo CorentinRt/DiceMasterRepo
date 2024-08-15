@@ -96,7 +96,7 @@ public class SlideMenuBehavior : MonoBehaviour
 
         _currentIndex = indexPos;
         
-        Debug.Log("Slide");
+        //Debug.Log("Slide");
         OnSlideTo?.Invoke(indexPos);
 
         _slideAnchor.DOLocalMoveX(-_positions[indexPos].localPosition.x, _transitionTime);
