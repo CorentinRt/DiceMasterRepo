@@ -78,6 +78,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NavBar
       objectReference: {fileID: 0}
+    - target: {fileID: 3682947707970168506, guid: 7a049dec1721ce34bb4f11373e774f29, type: 3}
+      propertyPath: m_fontSize
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 4340493940143866363, guid: 7a049dec1721ce34bb4f11373e774f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -229,6 +233,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7495194952993194186}
     m_Modifications:
+    - target: {fileID: 371314979604001121, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
+      propertyPath: m_fontSize
+      value: 22.15
+      objectReference: {fileID: 0}
     - target: {fileID: 3562635160173532475, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -269,9 +277,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4556287442432825086, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
+      propertyPath: m_fontSize
+      value: 7.65
+      objectReference: {fileID: 0}
     - target: {fileID: 4968701442712215488, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
       propertyPath: m_Name
       value: Header
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650102228462685887, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
+      propertyPath: m_fontSize
+      value: 19.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002673258238230054, guid: abe07c695d4e34a4fbab6fd2ce45f60d, type: 3}
+      propertyPath: m_fontSize
+      value: 7.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

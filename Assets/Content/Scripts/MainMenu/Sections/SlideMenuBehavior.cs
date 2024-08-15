@@ -1,5 +1,6 @@
 using DG.Tweening;
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -33,8 +34,12 @@ public class SlideMenuBehavior : MonoBehaviour
 
     #endregion
 
+    public event Action<int> OnSlideTo;
+
     #region Properties
     public bool IsAutomatic { get => _slideType == SLIDE_MENU_TYPE.AUTOMATIC; }
+    public List<RectTransform> Positions { get => _positions; set => _positions = value; }
+    public int StartIndex { get => _startIndex; set => _startIndex = value; }
 
     #endregion
 
@@ -90,7 +95,10 @@ public class SlideMenuBehavior : MonoBehaviour
             return;
 
         _currentIndex = indexPos;
+        
         Debug.Log("Slide");
+        OnSlideTo?.Invoke(indexPos);
+
         _slideAnchor.DOLocalMoveX(-_positions[indexPos].localPosition.x, _transitionTime);
     }
 
