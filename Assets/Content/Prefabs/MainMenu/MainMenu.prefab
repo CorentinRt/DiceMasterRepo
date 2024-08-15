@@ -160,9 +160,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7495194952993194186}
     m_Modifications:
+    - target: {fileID: 1005407728783806430, guid: cfe4d0d8da7b025419d34138ddab51e0, type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005407728783806430, guid: cfe4d0d8da7b025419d34138ddab51e0, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5711989164510083979, guid: cfe4d0d8da7b025419d34138ddab51e0, type: 3}
       propertyPath: m_Name
       value: Sections
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902963874055009867, guid: cfe4d0d8da7b025419d34138ddab51e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 8375601847022196919, guid: cfe4d0d8da7b025419d34138ddab51e0, type: 3}
       propertyPath: m_LocalPosition.x
