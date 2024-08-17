@@ -25,6 +25,7 @@ public class SaveLoadDataJSON : MonoBehaviour
 
 
     #endregion
+
     #region Properties
     public static SaveLoadDataJSON Instance { get => _instance; set => _instance = value; }
 
@@ -59,7 +60,7 @@ public class SaveLoadDataJSON : MonoBehaviour
     {
         foreach (CardData_ScriptableObject card in _cardsInventoryData.CardsData)   // Pour toutes les cartes existantes dans le jeu
         {
-            if (!File.Exists(_saveFilePathPrefix + card.Name + _saveFilePathSuffix))    // Si le fichier de sauvegarde de la carte n'existe pas déjà alors on le crée
+            if (!File.Exists(_saveFilePathPrefix + card.CardData.Name + _saveFilePathSuffix))    // Si le fichier de sauvegarde de la carte n'existe pas déjà alors on le crée
             {
                 SaveCardDataJSON(card);
             }
@@ -70,24 +71,43 @@ public class SaveLoadDataJSON : MonoBehaviour
     {
         _currentCardData = cardData;
 
-        string saveCardData = JsonUtility.ToJson(_currentCardData);
-        File.WriteAllText(_saveFilePathPrefix + cardData.Name + _saveFilePathSuffix, saveCardData);
+        string saveCardData = JsonUtility.ToJson(_currentCardData.CardData);
+        File.WriteAllText(_saveFilePathPrefix + cardData.CardData.Name + _saveFilePathSuffix, saveCardData);
 
-        Debug.Log("Save file created at: " + _saveFilePathPrefix + cardData.Name + _saveFilePathSuffix);
+        Debug.Log("Save file created at: " + _saveFilePathPrefix + cardData.CardData.Name + _saveFilePathSuffix);
     }
 
-    public void LoadCardDataJSON(string cardName)
+    public CardData LoadCardDataJSON(string cardName)
     {
         if (File.Exists(_saveFilePathPrefix + cardName + _saveFilePathSuffix))
         {
-            string LoadCardData = File.ReadAllText(_saveFilePathPrefix + cardName + _saveFilePathSuffix);
-            _currentCardData = JsonUtility.FromJson<CardData_ScriptableObject>(LoadCardData);
+            CardData cardData = new CardData();
 
-            Debug.Log("Load card complete! \nCard name: " + _currentCardData.Name);
+            string LoadCardData = File.ReadAllText(_saveFilePathPrefix + cardName + _saveFilePathSuffix);
+            cardData = JsonUtility.FromJson<CardData>(LoadCardData);
+
+            Debug.Log("Load card complete! \nCard name: " + cardData.Name);
+
+            return cardData;
         }
         else
+        {
             Debug.Log("There is no save files to load!");
+            return null;
+        }
+    }
 
+    public List<CardData> LoadAllCardsDataJSON()
+    {
+        List<CardData> cardsSavedData;
+        cardsSavedData = new List<CardData>();
+
+        foreach (CardData_ScriptableObject cardData in _cardsInventoryData.CardsData)
+        {
+            cardsSavedData.Add(LoadCardDataJSON(cardData.CardData.Name));
+        }
+
+        return cardsSavedData;
     }
     #endregion
 

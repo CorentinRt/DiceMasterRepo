@@ -6,7 +6,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "CardData", menuName = "ScriptableObjects/CardData", order = 1)]
 public class CardData_ScriptableObject : ScriptableObject
 {
-    private enum VISUAL_CARD_TYPE
+    [SerializeField] private CardData _cardData;
+
+    public CardData CardData { get => _cardData; set => _cardData = value; }
+}
+
+[System.Serializable]
+public class CardData
+{
+    public enum VISUAL_CARD_TYPE
     {
         SINGLE,
         DOUBLE
@@ -36,6 +44,10 @@ public class CardData_ScriptableObject : ScriptableObject
 
     #region Properties
     public string Name { get => _name; set => _name = value; }
-    
+    public bool Unlocked { get => _unlocked; set => _unlocked = value; }
+    public VISUAL_CARD_TYPE VisualType { get => _visualType; set => _visualType = value; }
+    public Sprite IllustrationTop { get => _illustrationTop; set => _illustrationTop = value; }
+    public Sprite IllustrationBot { get => _illustrationBot; set => _illustrationBot = value; }
+
     #endregion
 }
