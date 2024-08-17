@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "CardData", menuName = "ScriptableObjects/CardData", order = 1)]
 public class CardData_ScriptableObject : ScriptableObject
 {
+    private enum VISUAL_CARD_TYPE
+    {
+        SINGLE,
+        DOUBLE
+    }
+
     #region Fields
     [Header("Info")]
     [SerializeField] private string _name;
@@ -12,8 +19,9 @@ public class CardData_ScriptableObject : ScriptableObject
     [Space(20)]
 
     [Header("Visuals")]
+    [SerializeField] VISUAL_CARD_TYPE _visualType;
     [SerializeField] private Sprite _illustrationTop;
-    [SerializeField] private Sprite _illustrationBot;
+    [SerializeField, ShowIf("_visualType", VISUAL_CARD_TYPE.DOUBLE)] private Sprite _illustrationBot;
 
     [Space(20)]
 
