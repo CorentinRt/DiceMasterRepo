@@ -15,6 +15,7 @@ public class CardData_ScriptableObject : ScriptableObject
     #region Fields
     [Header("Info")]
     [SerializeField] private string _name;
+    [SerializeField] private bool _unlocked;
 
     [Space(20)]
 
@@ -30,5 +31,11 @@ public class CardData_ScriptableObject : ScriptableObject
     [SerializeField] private int _attack;
     [SerializeField] private int _defense;
 
+
+    #endregion
+
+    #region Properties
+    public string Name { get => _name; set => _name = value; }
+    
     #endregion
 }
