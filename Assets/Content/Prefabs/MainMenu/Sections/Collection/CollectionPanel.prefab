@@ -386,7 +386,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cardContainer: {fileID: 1746794635187569860}
-  _cardsInventoryData: {fileID: 11400000, guid: 1ce7314701c089d4b85dbd90c5e6af9c, type: 2}
   _cardUIPrefab: {fileID: 5088475055216957466, guid: 5feb4594cb9fac34fa962ee45e2dfa4f, type: 3}
 --- !u!1 &3352436566835105129
 GameObject:
@@ -1230,7 +1229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0.000030517578}
   m_SizeDelta: {x: 0, y: -363.48}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &6972637977430874745
@@ -1253,10 +1252,10 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 150}
+  m_CellSize: {x: 130, y: 195}
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 1
-  m_ConstraintCount: 5
+  m_ConstraintCount: 4
 --- !u!114 &8609403641257576924
 MonoBehaviour:
   m_ObjectHideFlags: 0

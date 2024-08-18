@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class SaveLoadDataJSON : MonoBehaviour
@@ -30,6 +31,8 @@ public class SaveLoadDataJSON : MonoBehaviour
     public static SaveLoadDataJSON Instance { get => _instance; set => _instance = value; }
 
     #endregion
+
+    public UnityEvent OnSetupLoadFinishedUnity;
 
 
     private void Awake()
@@ -65,6 +68,8 @@ public class SaveLoadDataJSON : MonoBehaviour
                 SaveCardDataJSON(card);
             }
         }
+
+        OnSetupLoadFinishedUnity?.Invoke();
     }
 
     public void SaveCardDataJSON(CardData_ScriptableObject cardData)
