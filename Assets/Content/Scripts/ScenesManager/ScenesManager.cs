@@ -7,13 +7,37 @@ using UnityEngine.SceneManagement;
 public class ScenesManager : MonoBehaviour
 {
     #region Fields
+    private static ScenesManager _instance;
+
     [SerializeField] private string _menuSceneName;
 
     private float _asyncLoadPercent;
 
+
+    #endregion
+
+    #region Properties
+    public static ScenesManager Instance { get => _instance; set => _instance = value; }
+
+
     #endregion
 
     public event Action<float> OnLoadProgress;
+
+
+    private void Awake()
+    {
+        #region Singleton Setup
+        if (_instance != null)
+        {
+            Debug.LogWarning("Two ScenesManager singleton conflicted ! One has been destroy on its awake !");
+            Destroy(this.gameObject);
+        }
+        _instance = this;
+        #endregion
+
+
+    }
 
 
     #region Load Scene Methods
