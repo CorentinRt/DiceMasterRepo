@@ -21,8 +21,12 @@ public class CardData
     }
 
     #region Fields
+    [Header("Data Tools (Don't modify !)")]
+    [SerializeField] private int _indexInventory;
+
+    [Space(40)]
+
     [Header("Info")]
-    private int _indexInventory;
     [SerializeField] private string _name;
     [SerializeField] private bool _unlocked;
 

@@ -39,7 +39,7 @@ public class CollectionBehavior : MonoBehaviour
         if (_loadDataJSON == null)
             return;
 
-        Debug.Log("Setup Collection Cards");
+        //Debug.Log("Setup Collection Cards");
 
         List<CardData_ScriptableObject> cardsSavedData = _cardsInventoryData.CardsData;
 
@@ -47,8 +47,6 @@ public class CollectionBehavior : MonoBehaviour
         {
             GameObject currentCard = Instantiate(_cardUIPrefab, _cardContainer);
             currentCard.SetActive(true);
-            Debug.Log("Instantiate, " + cardDataS.CardData.Name);
-            Debug.Log("Instantiate, " + cardDataS.CardData.IllustrationTop.GetType());
             _cardsCollection[cardDataS.CardData.Name] = currentCard;
 
             currentCard.GetComponent<Card_Setup>().CardSetup(cardDataS);

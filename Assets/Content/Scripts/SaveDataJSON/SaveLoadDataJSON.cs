@@ -68,6 +68,8 @@ public class SaveLoadDataJSON : MonoBehaviour
 
             cardDataS.CardData.IndexInventory = i;
 
+            _cardsInventoryData.CardsData[i] = cardDataS;
+
             if (!File.Exists(_saveFilePathPrefix + cardDataS.CardData.Name + _saveFilePathSuffix))    // Si le fichier de sauvegarde de la carte n'existe pas déjà alors on le crée
             {
                 SaveCardDataJSON(cardDataS);
@@ -79,21 +81,6 @@ public class SaveLoadDataJSON : MonoBehaviour
                 SaveCardDataJSON(cardDataS);
             }
         }
-
-
-        //foreach (CardData_ScriptableObject cardDataS in _cardsInventoryData.CardsData)   // Pour toutes les cartes existantes dans le jeu
-        //{
-        //    if (!File.Exists(_saveFilePathPrefix + cardDataS.CardData.Name + _saveFilePathSuffix))    // Si le fichier de sauvegarde de la carte n'existe pas déjà alors on le crée
-        //    {
-        //        SaveCardDataJSON(cardDataS);
-        //    }
-        //    else     // Si le fichier existe déjà alors l'inventaire prends les infos du json et re-sauvegarde avec les infos à jour pour pouvoir re-mettre le bon path de l'image
-        //    {
-        //        CardData tempCardData = LoadCardDataJSON(cardDataS.CardData.Name);
-        //        cardDataS.CardData = tempCardData;
-        //        SaveCardDataJSON(cardDataS);
-        //    }
-        //}
 
         OnSetupLoadFinishedUnity?.Invoke();
     }

@@ -21,13 +21,9 @@ public class Card_Setup : MonoBehaviour
     public void CardSetup(CardData_ScriptableObject cardDataS)
     {
         _cardDataS = cardDataS;
-        Debug.Log("test1");
-        if (cardDataS.CardData.IllustrationTop == null)
-        {
-            Debug.Log("Test1.5");
-        }
+
         _illustrationTopImage.sprite = cardDataS.CardData.IllustrationTop;
-        Debug.Log("test2");
+
         if (cardDataS.CardData.VisualType == CardData.VISUAL_CARD_TYPE.DOUBLE)
         {
             _illustrationTransparentImage.sprite = cardDataS.CardData.IllustrationBot;
