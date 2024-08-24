@@ -22,6 +22,7 @@ public class CardData
 
     #region Fields
     [Header("Info")]
+    private int _indexInventory;
     [SerializeField] private string _name;
     [SerializeField] private bool _unlocked;
 
@@ -43,6 +44,7 @@ public class CardData
     #endregion
 
     #region Properties
+    public int IndexInventory { get => _indexInventory; set => _indexInventory = value; }
     public string Name { get => _name; set => _name = value; }
     public bool Unlocked { get => _unlocked; set => _unlocked = value; }
     public VISUAL_CARD_TYPE VisualType { get => _visualType; set => _visualType = value; }

@@ -8,35 +8,29 @@ using UnityEngine.UI;
 public class Card_Setup : MonoBehaviour
 {
     #region Fields
+    [Header("Info")]
+    private CardData_ScriptableObject _cardDataS;
+    
     [Header("Visuals")]
     [SerializeField] private Image _illustrationTopImage;
     [SerializeField] private Image _illustrationTransparentImage;
-
-    [Header("Info")]
     [SerializeField] private TextMeshProUGUI _cardNameText;
-
-    [SerializeField] CardData_ScriptableObject _scriptableObject;
 
     #endregion
 
-    [Button]
-    public void SetupArakar()
+    public void CardSetup(CardData_ScriptableObject cardDataS)
     {
-        CardSetup(_scriptableObject.CardData);
-    }
-
-    public void CardSetup(CardData cardData)
-    {
+        _cardDataS = cardDataS;
         Debug.Log("test1");
-        if (cardData.IllustrationTop == null)
+        if (cardDataS.CardData.IllustrationTop == null)
         {
             Debug.Log("Test1.5");
         }
-        _illustrationTopImage.sprite = cardData.IllustrationTop;
+        _illustrationTopImage.sprite = cardDataS.CardData.IllustrationTop;
         Debug.Log("test2");
-        if (cardData.VisualType == CardData.VISUAL_CARD_TYPE.DOUBLE)
+        if (cardDataS.CardData.VisualType == CardData.VISUAL_CARD_TYPE.DOUBLE)
         {
-            _illustrationTransparentImage.sprite = cardData.IllustrationBot;
+            _illustrationTransparentImage.sprite = cardDataS.CardData.IllustrationBot;
         }
         else
         {
@@ -44,7 +38,7 @@ public class Card_Setup : MonoBehaviour
         }
 
 
-        _cardNameText.text = cardData.Name;
+        _cardNameText.text = cardDataS.CardData.Name;
     }
 
 }

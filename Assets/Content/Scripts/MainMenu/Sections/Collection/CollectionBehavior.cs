@@ -9,7 +9,7 @@ public class CollectionBehavior : MonoBehaviour
 
     private Dictionary<string, GameObject> _cardsCollection;
 
-    private List<CardData> _cardsSavedData;
+    private CardsInventoryData_ScriptableObject _cardsInventoryData;
 
     [Header("Setup")]
     [SerializeField] private RectTransform _cardContainer;
@@ -27,7 +27,7 @@ public class CollectionBehavior : MonoBehaviour
 
         if (_loadDataJSON != null)
         {
-            _cardsSavedData = _loadDataJSON.LoadAllCardsDataJSON();
+            _cardsInventoryData = _loadDataJSON.CardsInventoryData;
         }
 
         SetupCollectionCards();
@@ -41,17 +41,19 @@ public class CollectionBehavior : MonoBehaviour
 
         Debug.Log("Setup Collection Cards");
 
-        foreach (CardData cardData in _cardsSavedData)
+        List<CardData_ScriptableObject> cardsSavedData = _cardsInventoryData.CardsData;
+
+        foreach (CardData_ScriptableObject cardDataS in cardsSavedData)
         {
             GameObject currentCard = Instantiate(_cardUIPrefab, _cardContainer);
             currentCard.SetActive(true);
-            Debug.Log("Instantiate, " + cardData.Name);
-            Debug.Log("Instantiate, " + cardData.IllustrationTop.GetType());
-            _cardsCollection[cardData.Name] = currentCard;
+            Debug.Log("Instantiate, " + cardDataS.CardData.Name);
+            Debug.Log("Instantiate, " + cardDataS.CardData.IllustrationTop.GetType());
+            _cardsCollection[cardDataS.CardData.Name] = currentCard;
 
-            currentCard.GetComponent<Card_Setup>().CardSetup(cardData);
+            currentCard.GetComponent<Card_Setup>().CardSetup(cardDataS);
 
-            if (!cardData.Unlocked)
+            if (!cardDataS.CardData.Unlocked)
             {
                 currentCard.SetActive(false);
             }
