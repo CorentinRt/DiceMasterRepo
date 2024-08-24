@@ -46,6 +46,7 @@ public class CollectionBehavior : MonoBehaviour
             GameObject currentCard = Instantiate(_cardUIPrefab, _cardContainer);
             currentCard.SetActive(true);
             Debug.Log("Instantiate, " + cardData.Name);
+            Debug.Log("Instantiate, " + cardData.IllustrationTop.GetType());
             _cardsCollection[cardData.Name] = currentCard;
 
             currentCard.GetComponent<Card_Setup>().CardSetup(cardData);

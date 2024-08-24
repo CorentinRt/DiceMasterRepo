@@ -333,6 +333,7 @@ MonoBehaviour:
   _illustrationTopImage: {fileID: 5828777166601338857}
   _illustrationTransparentImage: {fileID: 256222321665078898}
   _cardNameText: {fileID: 5582540450558147636}
+  _scriptableObject: {fileID: 11400000, guid: 31edc74948e53e34d8f8cd26dbbb499c, type: 2}
 --- !u!114 &7434747982406005685
 MonoBehaviour:
   m_ObjectHideFlags: 0

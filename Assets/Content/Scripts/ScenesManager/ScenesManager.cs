@@ -36,7 +36,7 @@ public class ScenesManager : MonoBehaviour
         _instance = this;
         #endregion
 
-
+        DontDestroyOnLoad(this);
     }
 
 

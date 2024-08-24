@@ -61,17 +61,31 @@ public class SaveLoadDataJSON : MonoBehaviour
     #region Card Data Setup and Methods
     private void SetupCardsInventoryJSON()
     {
-        foreach (CardData_ScriptableObject card in _cardsInventoryData.CardsData)   // Pour toutes les cartes existantes dans le jeu
+        foreach (CardData_ScriptableObject cardDataS in _cardsInventoryData.CardsData)   // Pour toutes les cartes existantes dans le jeu
         {
-            if (!File.Exists(_saveFilePathPrefix + card.CardData.Name + _saveFilePathSuffix))    // Si le fichier de sauvegarde de la carte n'existe pas déjà alors on le crée
+            if (!File.Exists(_saveFilePathPrefix + cardDataS.CardData.Name + _saveFilePathSuffix))    // Si le fichier de sauvegarde de la carte n'existe pas déjà alors on le crée
             {
-                SaveCardDataJSON(card);
+                SaveCardDataJSON(cardDataS);
+            }
+            else     // Si le fichier existe déjà alors l'inventaire prends les infos du json et re-sauvegarde avec les infos à jour pour pouvoir re-mettre le bon path de l'image
+            {
+                CardData tempCardData = LoadCardDataJSON(cardDataS.CardData.Name);
+                cardDataS.CardData = tempCardData;
+                SaveCardDataJSON(cardDataS);
             }
         }
 
         OnSetupLoadFinishedUnity?.Invoke();
     }
 
+    #region Saves
+    private void SaveAllCardsInventory(CardsInventoryData_ScriptableObject cardsInventory)
+    {
+        foreach (CardData_ScriptableObject cardDataS in cardsInventory.CardsData)
+        {
+            SaveCardDataJSON(cardDataS);
+        }
+    }
     public void SaveCardDataJSON(CardData_ScriptableObject cardData)
     {
         _currentCardData = cardData;
@@ -81,6 +95,9 @@ public class SaveLoadDataJSON : MonoBehaviour
 
         Debug.Log("Save file created at: " + _saveFilePathPrefix + cardData.CardData.Name + _saveFilePathSuffix);
     }
+    #endregion
+
+    #region Loads
 
     public CardData LoadCardDataJSON(string cardName)
     {
@@ -101,19 +118,30 @@ public class SaveLoadDataJSON : MonoBehaviour
             return null;
         }
     }
-
     public List<CardData> LoadAllCardsDataJSON()
     {
         List<CardData> cardsSavedData;
         cardsSavedData = new List<CardData>();
 
-        foreach (CardData_ScriptableObject cardData in _cardsInventoryData.CardsData)
+        foreach (CardData_ScriptableObject cardDataS in _cardsInventoryData.CardsData)
         {
-            cardsSavedData.Add(LoadCardDataJSON(cardData.CardData.Name));
+            cardsSavedData.Add(LoadCardDataJSON(cardDataS.CardData.Name));
         }
 
         return cardsSavedData;
     }
     #endregion
 
+    #endregion
+
+
+
+    #region UpdateCardsInventory
+    public void UpdateCardToInventory()
+    {
+        
+    }
+
+
+    #endregion
 }

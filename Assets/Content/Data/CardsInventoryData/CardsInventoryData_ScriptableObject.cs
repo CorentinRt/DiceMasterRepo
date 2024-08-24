@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,3 +10,4 @@ public class CardsInventoryData_ScriptableObject : ScriptableObject     // This 
 
     public List<CardData_ScriptableObject> CardsData { get => _cardsData; set => _cardsData = value; }
 }
+
