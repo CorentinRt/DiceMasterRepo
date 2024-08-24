@@ -2,13 +2,31 @@ using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static CardData;
 
 [CreateAssetMenu(fileName = "CardData", menuName = "ScriptableObjects/CardData", order = 1)]
 public class CardData_ScriptableObject : ScriptableObject
 {
+    #region Fields
     [SerializeField] private CardData _cardData;
 
+    #endregion
+
+    #region Properties
     public CardData CardData { get => _cardData; set => _cardData = value; }
+
+    [Space(40)]
+
+    [Header("Visuals")]
+    [SerializeField] VISUAL_CARD_TYPE _visualType;
+    [SerializeField] private Sprite _illustrationTop;
+    [SerializeField, ShowIf("_visualType", VISUAL_CARD_TYPE.DOUBLE)] private Sprite _illustrationBot;
+
+
+    public VISUAL_CARD_TYPE VisualType { get => _visualType; set => _visualType = value; }
+    public Sprite IllustrationTop { get => _illustrationTop; set => _illustrationTop = value; }
+    public Sprite IllustrationBot { get => _illustrationBot; set => _illustrationBot = value; }
+    #endregion
 }
 
 [System.Serializable]
@@ -30,12 +48,6 @@ public class CardData
     [SerializeField] private string _name;
     [SerializeField] private bool _unlocked;
 
-    [Space(20)]
-
-    [Header("Visuals")]
-    [SerializeField] VISUAL_CARD_TYPE _visualType;
-    [SerializeField] private Sprite _illustrationTop;
-    [SerializeField, ShowIf("_visualType", VISUAL_CARD_TYPE.DOUBLE)] private Sprite _illustrationBot;
 
     [Space(20)]
 
@@ -51,9 +63,6 @@ public class CardData
     public int IndexInventory { get => _indexInventory; set => _indexInventory = value; }
     public string Name { get => _name; set => _name = value; }
     public bool Unlocked { get => _unlocked; set => _unlocked = value; }
-    public VISUAL_CARD_TYPE VisualType { get => _visualType; set => _visualType = value; }
-    public Sprite IllustrationTop { get => _illustrationTop; set => _illustrationTop = value; }
-    public Sprite IllustrationBot { get => _illustrationBot; set => _illustrationBot = value; }
 
     #endregion
 }

@@ -24,11 +24,11 @@ public class Card_Setup : MonoBehaviour
 
         Debug.Log(cardDataS.CardData.Name + " Setup");
 
-        _illustrationTopImage.sprite = cardDataS.CardData.IllustrationTop;
+        _illustrationTopImage.sprite = cardDataS.IllustrationTop;
 
-        if (cardDataS.CardData.VisualType == CardData.VISUAL_CARD_TYPE.DOUBLE)
+        if (cardDataS.VisualType == CardData.VISUAL_CARD_TYPE.DOUBLE)
         {
-            _illustrationTransparentImage.sprite = cardDataS.CardData.IllustrationBot;
+            _illustrationTransparentImage.sprite = cardDataS.IllustrationBot;
         }
         else
         {

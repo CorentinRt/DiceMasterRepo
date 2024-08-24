@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c36f64b3d12cb0c46a215f5faf3ceb93, type: 3}
-  m_Name: CardData_Leviathan
+  m_Name: CardData_NightWitch
   m_EditorClassIdentifier: 
   _cardData:
-    _indexInventory: 1
-    _name: Leviathan
+    _indexInventory: 0
+    _name: NightWitch
     _unlocked: 1
     _cost: 0
     _attack: 0
     _defense: 0
   _visualType: 1
-  _illustrationTop: {fileID: 21300000, guid: b4d309099e20d0242b550b7ecefc3d3f, type: 3}
-  _illustrationBot: {fileID: 21300000, guid: 6e286c10a3dd44a4d99c0beddf1a6411, type: 3}
+  _illustrationTop: {fileID: 21300000, guid: 1b9a5c07e41dfd742a2733fbd7b38960, type: 3}
+  _illustrationBot: {fileID: 21300000, guid: 72adb1651d339924987fd6cff97290af, type: 3}
