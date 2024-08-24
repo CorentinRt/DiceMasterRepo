@@ -22,6 +22,8 @@ public class Card_Setup : MonoBehaviour
     {
         _cardDataS = cardDataS;
 
+        Debug.Log(cardDataS.CardData.Name + " Setup");
+
         _illustrationTopImage.sprite = cardDataS.CardData.IllustrationTop;
 
         if (cardDataS.CardData.VisualType == CardData.VISUAL_CARD_TYPE.DOUBLE)

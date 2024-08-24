@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: CardData_Leviathan
   m_EditorClassIdentifier: 
   _cardData:
+    _indexInventory: 1
     _name: Leviathan
-    _unlocked: 0
+    _unlocked: 1
     _visualType: 1
     _illustrationTop: {fileID: 21300000, guid: b4d309099e20d0242b550b7ecefc3d3f, type: 3}
     _illustrationBot: {fileID: 21300000, guid: 6e286c10a3dd44a4d99c0beddf1a6411, type: 3}
