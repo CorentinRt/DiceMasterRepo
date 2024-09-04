@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36f64b3d12cb0c46a215f5faf3ceb93, type: 3}
+  m_Name: CardData_Werewolf
+  m_EditorClassIdentifier: 
+  _cardData:
+    _indexInventory: 0
+    _name: Werewolf
+    _unlocked: 1
+    _cost: 0
+    _attack: 0
+    _defense: 0
+  _visualType: 1
+  _illustrationTop: {fileID: 21300000, guid: 68e35ff2c3826ef41aa03e8cd2f5ecc0, type: 3}
+  _illustrationBot: {fileID: 21300000, guid: 52349ee0a83f20f4b8364e14465f5ff6, type: 3}
