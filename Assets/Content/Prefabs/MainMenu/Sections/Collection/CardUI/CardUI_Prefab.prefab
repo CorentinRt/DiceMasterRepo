@@ -361,6 +361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inspectionType: 0
+  _centerCardDuration: 0
+  _inspectCardSpeed: 0
 --- !u!1 &5118744563059963338
 GameObject:
   m_ObjectHideFlags: 0
