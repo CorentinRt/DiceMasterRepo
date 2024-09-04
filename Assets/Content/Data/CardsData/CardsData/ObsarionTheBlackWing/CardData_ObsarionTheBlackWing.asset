@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36f64b3d12cb0c46a215f5faf3ceb93, type: 3}
+  m_Name: CardData_ObsarionTheBlackWing
+  m_EditorClassIdentifier: 
+  _cardData:
+    _indexInventory: 0
+    _name: ObsarionTheBlackWing
+    _unlocked: 1
+    _cost: 0
+    _attack: 0
+    _defense: 0
+  _visualType: 1
+  _illustrationTop: {fileID: 21300000, guid: 7b6a3055f96752e48b9be3f965eafe52, type: 3}
+  _illustrationBot: {fileID: 21300000, guid: bf1639ff1d04df6478811fdadc38c1e1, type: 3}
