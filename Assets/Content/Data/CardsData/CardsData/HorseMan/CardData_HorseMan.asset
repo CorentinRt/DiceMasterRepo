@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36f64b3d12cb0c46a215f5faf3ceb93, type: 3}
+  m_Name: CardData_HorseMan
+  m_EditorClassIdentifier: 
+  _cardData:
+    _indexInventory: 0
+    _name: HorseMan
+    _unlocked: 1
+    _cost: 0
+    _attack: 0
+    _defense: 0
+  _visualType: 1
+  _illustrationTop: {fileID: 21300000, guid: e6e67f9137e2855418cf760d0e998737, type: 3}
+  _illustrationBot: {fileID: 21300000, guid: 0ee0a78e7f4b61d48a790a090eca10b5, type: 3}
