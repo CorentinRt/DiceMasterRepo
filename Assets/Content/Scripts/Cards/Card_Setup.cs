@@ -16,6 +16,13 @@ public class Card_Setup : MonoBehaviour
     [SerializeField] private Image _illustrationTransparentImage;
     [SerializeField] private TextMeshProUGUI _cardNameText;
 
+
+    #endregion
+
+    #region Properties
+    public CardData_ScriptableObject CardDataS { get => _cardDataS; set => _cardDataS = value; }
+
+
     #endregion
 
     public void CardSetup(CardData_ScriptableObject cardDataS)

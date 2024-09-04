@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 6795845114399659707}
   - component: {fileID: 6553860284569495110}
   - component: {fileID: 7434747982406005685}
+  - component: {fileID: 3576410751136162804}
   m_Layer: 0
   m_Name: CardUI_Prefab
   m_TagString: Untagged
@@ -333,7 +334,6 @@ MonoBehaviour:
   _illustrationTopImage: {fileID: 5828777166601338857}
   _illustrationTransparentImage: {fileID: 256222321665078898}
   _cardNameText: {fileID: 5582540450558147636}
-  _scriptableObject: {fileID: 11400000, guid: 31edc74948e53e34d8f8cd26dbbb499c, type: 2}
 --- !u!114 &7434747982406005685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +348,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 0.6666667
+--- !u!114 &3576410751136162804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5088475055216957466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e591abc1b4983ea47b65ee0b990820f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inspectionType: 0
 --- !u!1 &5118744563059963338
 GameObject:
   m_ObjectHideFlags: 0
