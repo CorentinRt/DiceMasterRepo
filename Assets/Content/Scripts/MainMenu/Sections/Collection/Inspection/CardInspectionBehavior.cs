@@ -32,14 +32,22 @@ public class CardInspectionBehavior : MonoBehaviour, IPointerClickHandler, IPoin
 
     private bool _isInspecting;
 
+    [SerializeField] private GameObject _backCard;
+
     #endregion
 
-    private void Start()
+    private void Awake()
     {
         _cardSetup = GetComponent<Card_Setup>();
-
-        _inspectionBehavior = InspectionBehavior.Instance;
+        
     }
+    private void Start()
+    {
+        _inspectionBehavior = InspectionBehavior.Instance;
+
+        _backCard.SetActive(false);
+    }
+
 
     #region IPointerHandler
     public void OnPointerClick(PointerEventData eventData)
@@ -86,10 +94,37 @@ public class CardInspectionBehavior : MonoBehaviour, IPointerClickHandler, IPoin
     }
     #endregion
 
+    #region Show/Hide Back Card
+    private void SetBackCardShowHide()
+    {
+        bool isTurnedHorizontal = (transform.rotation.eulerAngles.y % 360 > 90 && transform.rotation.eulerAngles.y % 360 < 270) || (transform.rotation.eulerAngles.y % 360 < 270 && transform.rotation.eulerAngles.y % 360 > 90);
+
+        bool isTurnedVertical = (transform.rotation.eulerAngles.x % 360 > 90 && transform.rotation.eulerAngles.x % 360 < 270) || (transform.rotation.eulerAngles.x % 360 < 270 && transform.rotation.eulerAngles.x % 360 > 90);
+
+        if (isTurnedHorizontal || isTurnedVertical)
+        {
+            ShowBackCard();
+        }
+        else
+        {
+            HideBackCard();
+        }
+    }
+    private void ShowBackCard()
+    {
+        _backCard.SetActive(true);
+    }
+    private void HideBackCard()
+    {
+        _backCard.SetActive(false);
+    }
+
+    #endregion
+
     #region CenterCard
     private void StartCenterCard()
     {
-        _centerTween = gameObject.transform.DORotate(new Vector3(0, 0, 0), _centerCardDuration);
+        _centerTween = gameObject.transform.DORotate(new Vector3(0, 0, 0), _centerCardDuration).OnUpdate(()=>SetBackCardShowHide());
 
         _centerTween.Play();
 
@@ -119,6 +154,10 @@ public class CardInspectionBehavior : MonoBehaviour, IPointerClickHandler, IPoin
             tempVect.x += deltaY;
 
             transform.rotation = Quaternion.Euler(tempVect);
+
+            Debug.Log(transform.rotation.eulerAngles.y % 360);
+
+            SetBackCardShowHide();
 
             _lastMousePos = Input.mousePosition;
 

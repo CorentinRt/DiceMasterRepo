@@ -460,6 +460,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8379146987667585476, guid: cbde059bb0e1655489104ec8b0db8021, type: 3}
+      propertyPath: _inspectCardSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8711168581240550728, guid: cbde059bb0e1655489104ec8b0db8021, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
