@@ -25,6 +25,7 @@ public class Card_Setup : MonoBehaviour
 
     #endregion
 
+    #region Card Setup
     public void CardSetup(CardData_ScriptableObject cardDataS)
     {
         _cardDataS = cardDataS;
@@ -42,8 +43,29 @@ public class Card_Setup : MonoBehaviour
             _illustrationTransparentImage.sprite = null;
         }
 
-
-        _cardNameText.text = cardDataS.CardData.Name;
+        _cardNameText.text = GetDisplayName(cardDataS.CardData.Name);
     }
+
+    private string GetDisplayName(string name)
+    {
+        string displayName = "";
+
+        for (int i = 0; i < name.Length; i++)
+        {
+            displayName += name[i];
+
+            if (i + 1 < name.Length)
+            {
+                if (char.IsUpper(name[i + 1]))
+                {
+                    displayName += " ";
+                }
+            }
+        }
+
+        return displayName;
+    }
+
+    #endregion
 
 }
