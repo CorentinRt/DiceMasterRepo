@@ -145,17 +145,10 @@ public class CardInspectionBehavior : MonoBehaviour, IPointerClickHandler, IPoin
 
         while (_isInspecting)
         {
-            float deltaX = (Input.mousePosition.x - _lastMousePos.x) * Time.deltaTime * _inspectCardSpeed;
-            float deltaY = (Input.mousePosition.y - _lastMousePos.y) * Time.deltaTime * _inspectCardSpeed;
+            float deltaX = ((Input.mousePosition.x - _lastMousePos.x) / Screen.width) * Time.deltaTime * _inspectCardSpeed;
+            float deltaY = ((Input.mousePosition.y - _lastMousePos.y) / Screen.height) * Time.deltaTime * _inspectCardSpeed;
 
-            Vector3 tempVect = transform.rotation.eulerAngles;
-
-            tempVect.y -= deltaX;
-            tempVect.x += deltaY;
-
-            transform.rotation = Quaternion.Euler(tempVect);
-
-            Debug.Log(transform.rotation.eulerAngles.y % 360);
+            transform.Rotate(new Vector3(deltaY, -deltaX));
 
             SetBackCardShowHide();
 
