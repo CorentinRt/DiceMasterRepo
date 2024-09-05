@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: CardData_Werewolf
   m_EditorClassIdentifier: 
   _cardData:
-    _indexInventory: 0
+    _indexInventory: 4
     _name: Werewolf
     _unlocked: 1
-    _cost: 0
-    _attack: 0
-    _defense: 0
+    _cost: 3
+    _attack: 6
+    _defense: 1
   _visualType: 1
   _illustrationTop: {fileID: 21300000, guid: 68e35ff2c3826ef41aa03e8cd2f5ecc0, type: 3}
   _illustrationBot: {fileID: 21300000, guid: 52349ee0a83f20f4b8364e14465f5ff6, type: 3}

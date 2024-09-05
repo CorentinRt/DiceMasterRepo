@@ -16,9 +16,9 @@ MonoBehaviour:
     _indexInventory: 1
     _name: Leviathan
     _unlocked: 1
-    _cost: 0
-    _attack: 0
-    _defense: 0
+    _cost: 6
+    _attack: 8
+    _defense: 8
   _visualType: 1
   _illustrationTop: {fileID: 21300000, guid: b4d309099e20d0242b550b7ecefc3d3f, type: 3}
   _illustrationBot: {fileID: 21300000, guid: 6e286c10a3dd44a4d99c0beddf1a6411, type: 3}

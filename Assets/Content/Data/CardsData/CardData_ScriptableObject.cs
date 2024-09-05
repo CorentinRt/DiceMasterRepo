@@ -63,6 +63,9 @@ public class CardData
     public int IndexInventory { get => _indexInventory; set => _indexInventory = value; }
     public string Name { get => _name; set => _name = value; }
     public bool Unlocked { get => _unlocked; set => _unlocked = value; }
+    public int Cost { get => _cost; set => _cost = value; }
+    public int Attack { get => _attack; set => _attack = value; }
+    public int Defense { get => _defense; set => _defense = value; }
 
     #endregion
 }

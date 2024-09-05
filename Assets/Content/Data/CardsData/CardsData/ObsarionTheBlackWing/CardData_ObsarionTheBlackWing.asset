@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: CardData_ObsarionTheBlackWing
   m_EditorClassIdentifier: 
   _cardData:
-    _indexInventory: 0
+    _indexInventory: 5
     _name: ObsarionTheBlackWing
     _unlocked: 1
-    _cost: 0
-    _attack: 0
-    _defense: 0
+    _cost: 6
+    _attack: 4
+    _defense: 12
   _visualType: 1
   _illustrationTop: {fileID: 21300000, guid: 7b6a3055f96752e48b9be3f965eafe52, type: 3}
   _illustrationBot: {fileID: 21300000, guid: bf1639ff1d04df6478811fdadc38c1e1, type: 3}

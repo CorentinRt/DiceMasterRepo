@@ -16,6 +16,10 @@ public class Card_Setup : MonoBehaviour
     [SerializeField] private Image _illustrationTransparentImage;
     [SerializeField] private TextMeshProUGUI _cardNameText;
 
+    [Header("Stats")]
+    [SerializeField] private TextMeshProUGUI _attackLabel;
+    [SerializeField] private TextMeshProUGUI _defenseLabel;
+    [SerializeField] private TextMeshProUGUI _costLabel;
 
     #endregion
 
@@ -32,6 +36,8 @@ public class Card_Setup : MonoBehaviour
 
         Debug.Log(cardDataS.CardData.Name + " Setup");
 
+        // Illustrations
+
         _illustrationTopImage.sprite = cardDataS.IllustrationTop;
 
         if (cardDataS.VisualType == CardData.VISUAL_CARD_TYPE.DOUBLE)
@@ -43,7 +49,13 @@ public class Card_Setup : MonoBehaviour
             _illustrationTransparentImage.sprite = null;
         }
 
+        // Name
+
         _cardNameText.text = GetDisplayName(cardDataS.CardData.Name);
+
+        // Stats
+
+        SetStatsText();
     }
 
     private string GetDisplayName(string name)
@@ -64,6 +76,20 @@ public class Card_Setup : MonoBehaviour
         }
 
         return displayName;
+    }
+    private void SetStatsText()
+    {
+        if (_cardDataS == null)
+            return;
+
+        if (_attackLabel != null)
+            _attackLabel.text = _cardDataS.CardData.Attack.ToString();
+
+        if (_defenseLabel != null)
+            _defenseLabel.text = _cardDataS.CardData.Defense.ToString();
+
+        if (_costLabel != null)
+            _costLabel.text = _cardDataS.CardData.Cost.ToString();
     }
 
     #endregion

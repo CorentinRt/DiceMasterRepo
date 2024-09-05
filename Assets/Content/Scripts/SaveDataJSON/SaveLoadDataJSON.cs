@@ -74,9 +74,12 @@ public class SaveLoadDataJSON : MonoBehaviour
             {
                 SaveCardDataJSON(cardDataS);
             }
-            else     // Si le fichier existe déjà alors l'inventaire prends les infos du json et re-sauvegarde avec les infos à jour pour pouvoir re-mettre le bon path de l'image
+            else     // Si le fichier existe déjà alors l'inventaire prends les infos du json et re-sauvegarde avec les infos du JSON
             {
                 CardData tempCardData = LoadCardDataJSON(cardDataS.CardData.Name);
+                tempCardData.Cost = cardDataS.CardData.Cost;
+                tempCardData.Attack = cardDataS.CardData.Attack;
+                tempCardData.Defense = cardDataS.CardData.Defense;
                 cardDataS.CardData = tempCardData;
                 SaveCardDataJSON(cardDataS);
             }
