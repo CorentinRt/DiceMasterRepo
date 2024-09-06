@@ -80,6 +80,7 @@ public class SaveLoadDataJSON : MonoBehaviour
                 tempCardData.Cost = cardDataS.CardData.Cost;
                 tempCardData.Attack = cardDataS.CardData.Attack;
                 tempCardData.Defense = cardDataS.CardData.Defense;
+                tempCardData.Rarity = cardDataS.CardData.Rarity;
                 cardDataS.CardData = tempCardData;
                 SaveCardDataJSON(cardDataS);
             }

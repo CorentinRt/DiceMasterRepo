@@ -15,6 +15,7 @@ public class Card_Setup : MonoBehaviour
     [SerializeField] private Image _illustrationTopImage;
     [SerializeField] private Image _illustrationTransparentImage;
     [SerializeField] private TextMeshProUGUI _cardNameText;
+    [SerializeField] private CardUpgradeEffects_ScriptableObject _cardUpgradeEffects;
 
     [Header("Stats")]
     [SerializeField] private TextMeshProUGUI _attackLabel;
@@ -91,7 +92,26 @@ public class Card_Setup : MonoBehaviour
         if (_costLabel != null)
             _costLabel.text = _cardDataS.CardData.Cost.ToString();
     }
+    private void SetEffectMaterial()
+    {
+        if (_cardDataS == null || _illustrationTopImage)
+            return;
 
+        switch (_cardDataS.CardData.UpgradeLevel)
+        {
+            case CardData.UPGRADE_CARD_LEVEL.BASIC:
+                _illustrationTopImage.material = null;
+                break;
+
+            case CardData.UPGRADE_CARD_LEVEL.SHINY:
+                _illustrationTopImage.material = _cardUpgradeEffects.ShinyMaterial;
+                break;
+
+            case CardData.UPGRADE_CARD_LEVEL.HOLOGRAPHIC:
+                _illustrationTopImage.material = _cardUpgradeEffects.HolographicMaterial;
+                break;
+        }
+    }
     #endregion
 
 }

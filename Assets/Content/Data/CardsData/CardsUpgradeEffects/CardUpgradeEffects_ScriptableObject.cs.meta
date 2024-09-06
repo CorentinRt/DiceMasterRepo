@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c5510e2d6f8e7744a81f10faba0254f6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _shinyMaterial: {instanceID: 0}
+  - _holographicMaterial: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -114,7 +114,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189887217882251984}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -751,6 +751,7 @@ MonoBehaviour:
   _illustrationTopImage: {fileID: 5828777166601338857}
   _illustrationTransparentImage: {fileID: 256222321665078898}
   _cardNameText: {fileID: 5582540450558147636}
+  _cardUpgradeEffects: {fileID: 11400000, guid: 037ad4afeb41c5746a5467f1dbf497d6, type: 2}
   _attackLabel: {fileID: 339893190996637205}
   _defenseLabel: {fileID: 434180348296356479}
   _costLabel: {fileID: 3145123066651923386}
