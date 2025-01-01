@@ -7,7 +7,7 @@ public class ShopBehavior : MonoBehaviour
     #region Fields
     private static ShopBehavior _instance;
 
-    [SerializeField] private GameObject _boosterOpener;
+    [SerializeField] private BoosterOpenerBehavior _boosterOpener;
 
 
     #endregion
@@ -30,14 +30,19 @@ public class ShopBehavior : MonoBehaviour
         #endregion
     }
 
+    private void Start()
+    {
+        CloseBoosterOpener();
+    }
+
     #region Booster Opener
     public void OpenBoosterOpener()
     {
-        _boosterOpener.SetActive(true);
+        _boosterOpener.OpenBoosterOpener();
     }
     public void CloseBoosterOpener()
     {
-        _boosterOpener.SetActive(false);
+        _boosterOpener.CloseBoosterOpener();
     }
     #endregion
 }
