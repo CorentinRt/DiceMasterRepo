@@ -437,6 +437,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _boosterOpenEffects: {fileID: 4891319484990315809}
   _boosterInspectionType: 0
+  _cardDataSInBooster:
+  - {fileID: 11400000, guid: 31edc74948e53e34d8f8cd26dbbb499c, type: 2}
+  - {fileID: 11400000, guid: 3017f198384d4dc4a95a956eb99d7ae9, type: 2}
+  - {fileID: 11400000, guid: 47e636730f327564a8978ba67be1da80, type: 2}
+  - {fileID: 11400000, guid: 00c6032fdf064f34885d241270b6a5f1, type: 2}
 --- !u!114 &4891319484990315809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +460,9 @@ MonoBehaviour:
   _shakeStrength: 10
   _shakeVibrato: 10
   _openTargetScaleEffect: {x: 0.3, y: 0.3, z: 0.3}
+  OnBoosterOpenEffectsEndUnity:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4894249544695370672
 GameObject:
   m_ObjectHideFlags: 0

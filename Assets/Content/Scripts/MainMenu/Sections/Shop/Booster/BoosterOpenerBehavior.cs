@@ -7,20 +7,14 @@ public class BoosterOpenerBehavior : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private BoosterBehavior _openingBoosterBehavior;
+    [SerializeField] private Card_Setup _openedCardSetup;
 
+    [SerializeField] private BoosterBehavior _openingBoosterBehavior;
 
     public UnityEvent OnOpenBoosterOpenerUnity;
 
     #endregion
 
-    private void Start()
-    {
-        if (_openingBoosterBehavior != null)
-        {
-            
-        }
-    }
 
     #region Open / Close
     public void OpenBoosterOpener()
@@ -36,4 +30,21 @@ public class BoosterOpenerBehavior : MonoBehaviour
     }
     #endregion
 
+    #region Appear Card In Booster
+    public void AppearRandomCardInBooster()
+    {
+        if (_openedCardSetup == null || _openingBoosterBehavior == null)
+            return;
+
+        CardData_ScriptableObject tempCardDataS = _openingBoosterBehavior.GetRandomCardDataSInBooster();
+
+        if (tempCardDataS == null)
+            return;
+
+        _openedCardSetup.CardSetup(tempCardDataS);
+
+        _openedCardSetup.gameObject.SetActive(true);
+    }
+
+    #endregion
 }

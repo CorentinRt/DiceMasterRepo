@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
 
 public enum BoosterInspectionType
@@ -17,6 +18,8 @@ public class BoosterBehavior : MonoBehaviour, IPointerClickHandler, IPointerDown
 
     [SerializeField] private BoosterOpenEffects _boosterOpenEffects;
     [SerializeField] private BoosterInspectionType _boosterInspectionType;
+
+    [SerializeField] private List<CardData_ScriptableObject> _cardDataSInBooster;
     #endregion
 
     public event Action OnOpenbooster;
@@ -72,4 +75,16 @@ public class BoosterBehavior : MonoBehaviour, IPointerClickHandler, IPointerDown
     }
 
     #endregion
+
+    public CardData_ScriptableObject GetRandomCardDataSInBooster()
+    {
+        int randIndex = 0;
+
+        randIndex = (int)Random.Range(0f, _cardDataSInBooster.Count);
+
+        if (randIndex < 0 || randIndex > _cardDataSInBooster.Count)
+            return null;
+
+        return _cardDataSInBooster[randIndex];
+    }
 }
