@@ -1277,6 +1277,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3039315778567975853, guid: 7ca279c94bdccf342b93efef2a3a34c3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3365056146577461669, guid: 7ca279c94bdccf342b93efef2a3a34c3, type: 3}
       propertyPath: m_fontSize
       value: 17.15
@@ -1388,6 +1392,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2598699248533301988, guid: b8ce792e2d6fb3a45a8121e51eb70690, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316343571685840999, guid: b8ce792e2d6fb3a45a8121e51eb70690, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
@@ -1508,6 +1516,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3039315778567975853, guid: 7ca279c94bdccf342b93efef2a3a34c3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3365056146577461669, guid: 7ca279c94bdccf342b93efef2a3a34c3, type: 3}
       propertyPath: m_fontSize
       value: 17.15
@@ -1618,6 +1630,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3039315778567975853, guid: 7ca279c94bdccf342b93efef2a3a34c3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3365056146577461669, guid: 7ca279c94bdccf342b93efef2a3a34c3, type: 3}
       propertyPath: m_fontSize
       value: 17.15
@@ -1725,6 +1741,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2203846031205071771}
     m_Modifications:
     - target: {fileID: 1377661029050724787, guid: 7ca279c94bdccf342b93efef2a3a34c3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3039315778567975853, guid: 7ca279c94bdccf342b93efef2a3a34c3, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}

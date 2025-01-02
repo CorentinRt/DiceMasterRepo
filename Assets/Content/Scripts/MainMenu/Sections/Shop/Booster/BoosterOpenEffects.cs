@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class BoosterOpenEffects : MonoBehaviour
@@ -12,9 +13,7 @@ public class BoosterOpenEffects : MonoBehaviour
 
 
     [SerializeField] private Image _boosterImage;
-
-    [SerializeField] private Color _openTargetColor;
-    [SerializeField] private Color _classicColor;
+    [SerializeField] private Image _boosterImageOpening;
 
     [SerializeField] private float _openEffectDuration;
 
@@ -28,6 +27,8 @@ public class BoosterOpenEffects : MonoBehaviour
     private Tween _scaleTween;
 
     #endregion
+
+    public UnityEvent OnBoosterOpenEffectsEndUnity;
 
 
     private void Awake()
@@ -51,7 +52,13 @@ public class BoosterOpenEffects : MonoBehaviour
             _scaleTween.Complete();
         }
 
-        _boosterImage.color = _classicColor;
+        gameObject.SetActive(true);
+
+        _boosterImage.rectTransform.localScale = new Vector3(1f, 1f, 1f);
+
+        Color tempTranspColor = Color.white;
+        tempTranspColor.a = 0f;
+        _boosterImageOpening.color = tempTranspColor;
     }
 
     public void TriggerOpenBoosterEffects()
@@ -71,7 +78,7 @@ public class BoosterOpenEffects : MonoBehaviour
             _colorChangeTween.Complete();
         }
 
-        _colorChangeTween = _boosterImage.DOColor(_openTargetColor, _openEffectDuration);
+        _colorChangeTween = _boosterImageOpening.DOFade(1f, _openEffectDuration).OnComplete(() => EndOpenEffects());
     }
     private void ShakeBoosterEffect()
     {
@@ -92,9 +99,16 @@ public class BoosterOpenEffects : MonoBehaviour
             _scaleTween.Complete();
         }
 
-        _scaleTween = _boosterImage.rectTransform.DOPunchScale(_openTargetScaleEffect, _openEffectDuration, 2, 1);
+        _scaleTween = _boosterImage.rectTransform.DOScale(_openTargetScaleEffect, _openEffectDuration);
     }
     #endregion
+
+    private void EndOpenEffects()
+    {
+        OnBoosterOpenEffectsEndUnity?.Invoke();
+
+        gameObject.SetActive(false);
+    }
 
     #endregion
 }
